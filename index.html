@@ -1,8 +1,143 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <title>10629748-曾愉晴</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#lessonLearntButton').on('click', function () { // 顯示/隱藏"動態網頁設計課程"的心得的按鈕事件綁定
+                $('#lessonLearntParagraph').toggleClass('d-none'); // toogle class表示有這個class就刪掉，沒有就加回來
+                $('#lessonLearntBadgeHide').toggleClass('d-none');
+                $('#lessonLearntBadgeShow').toggleClass('d-none');
+            });
+
+            $('#techniqueLearntButton').on('click', function () { // 顯示/隱藏"學到的技術"的按鈕事件綁定
+                $('#techniqueLearntParagraph').toggleClass('d-none');
+                $('#techniqueLearntBadgeHide').toggleClass('d-none');
+                $('#techniqueLearntBadgeShow').toggleClass('d-none');
+            });
+        });
+    </script>
+    <style>
+        #logo {
+            width: 200px;
+        }
+    </style>
 </head>
 <body>
+<main>
+    <div class="container py-4">
+        <header class="pb-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                <img id="logo" class="rounded-circle" src="https://sec.ocu.edu.tw/var/file/22/1022/img/442/106864719.jpg" alt="僑光校徽">
+                <span class="fs-4">10629748-曾愉晴 期末報告-109(下)動態網頁設計(授課教授：劉育良)</span>
+            </a>
+        </header>
 
+        <div class="alert alert-primary" role="alert">
+            <p class="fs-4">藉由這次期末報告的機會，我將報告以實作網頁的方式，來呈現這學期所學習到的成果。麻煩老師撥冗到我的GitHub上查看這個網頁的程式碼，非常謝謝您：<a href="https://github.com/love0114520/DynamicWebDesign109/blob/main/index.html" class="fs-1">請點此連結看程式碼</a></p>
+        </div>
+        <div class="p-5 mb-4 bg-light rounded-3">
+            <div class="container-fluid py-5">
+                <h1 class="display-5 fw-bold">動態網頁設計課程的心得</h1>
+                <span id="lessonLearntParagraph" class="col-md-12 fs-4 d-none">
+                    <p>現代的人很常透過網頁來接收資訊，這學期和主任學習到了如何運用HTML來做網頁，並且透過親自實作來感受到在瀏覽器打開自己網頁的成就感，直接體驗到以後如果我有機會製作網站的話，我應該要怎麼樣著手進行。除此之外，在課堂上學習到CSS選擇器或是JavaScript AJAX等技術，都是在實務上業界會使用到的，終身受用。而且透過實作練習，所產出的成果也可以整理起來變成一個作品，將來要面試的時候可以拿來當做是寶貴的資料，省了一些製作作品集的時間，能夠挪出更多的時候來準備面試的其他環節，實在太優質了。</p>
+                    <p>更讚的是，課堂上有提到響應式網頁設計，因此我多花了一些時間自學，找到由Twitter推出的知名現有open source框架Bootstrap來協助我快速開發一個響應式網頁，以同一個網頁在不同尺寸的裝置上呈現出適合該尺寸的排板，這個是近幾年業界實務上一直致力推動的，沒想到在這堂課能夠接觸到這個概念，實在非常感謝劉育良老師用心的規劃課程！上完這堂課，令我對HTML、JavaScript和CSS有基本的認識，以後如果有需要設計出擁有個人特色的Email、名片，甚至朝前端工程師的職涯邁進，都難不倒我！</p>
+                </span>
+                <button id="lessonLearntButton" class="btn btn-primary btn-lg" type="button"><span class="badge bg-warning text-dark"><span id="lessonLearntBadgeShow">顯示</span><span id="lessonLearntBadgeHide" class="d-none">隱藏</span></span> 心得</button>
+            </div>
+        </div>
+
+        <div class="row align-items-md-stretch">
+            <div class="col-md-6">
+                <div class="h-100 p-5 text-white bg-dark rounded-3">
+                    <h2>學到的技術</h2>
+                    <span id="techniqueLearntParagraph" class="fs-4 d-none">
+                        <p>首先在HTML部分，在課堂上學到了基本的概念與語法，知道它是一個標記語言，必需要上下有開始與結束一組標籤，例如&lt;html&gt;&lt;/html&gt;，並且在該標籤範圍內定義屬於它的資料，且主要分成head與body，head中存放描述這個網頁的資訊，也就是metadata，例如網頁的標題(顯示在分頁上)，body中存放網頁主要顯示出來的長相所需的資料，例如段落p、超連結a、表格table，由這些定義內容的標籤搭配CSS修改元素的呈現方式例如背景顏色 ，以及Javascript處理事件做相對應的網頁內容修改，例如按按鈕後背景色白變黑。</p>
+                        <p>接著是CSS部分，透過它我可以設定網頁上元素的外觀，例如調整背景顏色、邊框粗細、字體大小等，並且認識了id是唯一識別元素的關鍵字(同個網頁上不能有同個id出現2次)，能夠透過id來特別針對該元素設定它的外觀，以及class來群體設定一些元素的外觀，並且學習到CSS選擇器，能夠針對前面提到的2個屬性(id&class)做設定以外，還能處理奇、偶數個項目(例如tr:nth-child(even))，以達成表格之類的元素能夠有隔行換背景顏色的效果，以增進表格的可讀性。</p>
+                        <p>最後是JavaScript，使用它能讓網頁擁有與使用者互動的效果，例如這次的作業，我先把心得隱藏起來，等到使用者點了"顯示心得"按鈕之後，我才真的把心得的元素顯示出來，並且把按鈕上的"顯示"字樣換成"隱藏"，另外也能透過AJAX，從網頁上的輸入元素(form的input、select、check、radio等)取得使用者的資料後，將資料送出到後端伺服器進行運算處理或者儲存起來，就是一個實務上真正的動態網頁了。</p>
+                    </span>
+                    <button id="techniqueLearntButton" class="btn btn-outline-light" type="button"><span class="badge bg-light text-dark"><span id="techniqueLearntBadgeShow">顯示</span><span id="techniqueLearntBadgeHide" class="d-none">隱藏</span></span> 學到的技術</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="h-100 p-5 bg-light border rounded-3">
+                    <h2>我家貓咪的粉絲專頁</h2>
+                    <p>我有養幾隻可愛的貓咪，如果老師喜歡，也歡迎幫我按讚/追蹤哦，謝謝~</p>
+                    <blockquote class="instagram-media" data-instgrm-captioned
+                                data-instgrm-permalink="https://www.instagram.com/p/CP0yp1mjWm5/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                data-instgrm-version="13"
+                                style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                        <div style="padding:16px;"><a
+                                href="https://www.instagram.com/p/CP0yp1mjWm5/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+                                target="_blank">
+                            <div style=" display: flex; flex-direction: row; align-items: center;">
+                                <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
+                                <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                                    <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div>
+                                    <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div>
+                                </div>
+                            </div>
+                            <div style="padding: 19% 0;"></div>
+                            <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+                                <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1"
+                                     xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                                            <g>
+                                                <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div style="padding-top: 8px;">
+                                <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
+                                    View this post on Instagram
+                                </div>
+                            </div>
+                            <div style="padding: 12.5% 0;"></div>
+                            <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                                <div>
+                                    <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div>
+                                    <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div>
+                                    <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div>
+                                </div>
+                                <div style="margin-left: 8px;">
+                                    <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div>
+                                    <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div>
+                                </div>
+                                <div style="margin-left: auto;">
+                                    <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div>
+                                    <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div>
+                                    <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div>
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+                                <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div>
+                                <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div>
+                            </div>
+                        </a>
+                            <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                                <a href="https://www.instagram.com/p/CP0yp1mjWm5/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                   style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
+                                   target="_blank">A post shared by 春の昼から夜まで (@yohahi_ru_8)</a></p></div>
+                    </blockquote>
+                    <script async src="https://www.instagram.com/embed.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <footer class="pt-3 mt-4 text-muted border-top">10629748-曾愉晴 © 2021</footer>
+    </div>
+</main>
 </body>
 </html>
